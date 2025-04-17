@@ -1,0 +1,506 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/background.jpg');
+    /* Ruta relativa */
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-attachment: fixed;
+    /* Fija la imagen al fondo */
+    color: #000000;
+    /* Color del texto */
+}
+
+.fcc-btn:hover {
+    background-color: #223094;
+}
+
+h1,
+h2 {
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #5b2ed9, #ffffff, #2f36c9);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 5s infinite;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(47, 54, 201, 0.6);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 20px #ffffff, 0 0 40px #2f36c9, 0 0 60px #2f36c9;
+    animation: glow 1.5s infinite alternate;
+}
+
+h2 {
+    color: #0c07aa;
+    margin-bottom: 1rem;
+}
+
+/* Header Styles */
+header {
+    background-color: #110687;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(253, 252, 252, 0.1);
+}
+
+nav .menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav .menu-link {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2f36c9;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav .menu-link:hover {
+    background-color: #004080;
+    transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.content-section {
+    display: none;
+    background-color: #050505;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.content-section h2 {
+    margin-top: 0;
+    color: #2f36c9;
+}
+
+/* Form Styles */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #faf7f7;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+}
+
+button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #004080;
+    transform: scale(1.05);
+}
+
+/* Table Styles */
+.styled-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+    background-color: #004080;
+    color: white;
+    font-weight: bold;
+}
+
+.styled-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f5f5;
+    color: #f8f6f6;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes gradientMove {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 20px #ffffff, 0 0 40px #2f36c9, 0 0 60px #2f36c9;
+    }
+
+    100% {
+        text-shadow: 0 0 30px #ffffff, 0 0 50px #2f36c9, 0 0 70px #2f36c9;
+    }
+}
+
+/* Estilo general para las secciones */
+.content-section {
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    color: #ffffff;
+    /* Asegura que el texto sea legible sobre la imagen */
+}
+
+/* Imagen de fondo para la sección de Técnicos */
+#Tecnicos {
+    background-image: url('../img/fondo1.webp');
+    /* Ruta de la imagen */
+}
+
+/* Imagen de fondo para la sección de Gestión de Usuarios */
+#users {
+    background-image: url('../img/fondo2.jpg');
+    /* Ruta de la imagen */
+}
+
+/* Imagen de fondo para la sección de Registro de Equipos */
+#equipment {
+    background-image: url('../img/fondo3.jpg');
+    /* Ruta de la imagen */
+}
+
+/* Imagen de fondo para la sección de Administración de Sedes */
+#locations {
+    background-image: url('../img/fondo4.jpg');
+    /* Ruta de la imagen */
+}
+
+/* Imagen de fondo para la sección de Listado de Clientes */
+#clients {
+    background-image: url('../img/fondo5.jpg');
+    /* Ruta de la imagen */
+}
+
+/* Imagen de fondo para la sección de Historial de Visitas */
+#history {
+    background-image: url('../img/correo.jpg');
+    /* Ruta de la imagen */
+}
+
+/* Aplica estilos solo a la sección de equipos */
+#locations .equipment-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos pasen a la siguiente línea si no caben */
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+    gap: 20px;
+    /* Espacio entre los elementos */
+    padding: 20px;
+}
+
+#locations .equipment-item {
+    width: 250px;
+    /* Ancho fijo para cada equipo */
+    background: #ffffff;
+    /* Fondo blanco */
+    padding: 15px;
+    border: 2px solid #ddd;
+    /* Borde sutil */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#locations .equipment-item img {
+    width: 100%;
+    /* La imagen ocupa el 100% del ancho del contenedor */
+    height: auto;
+    border-bottom: 2px solid #ddd;
+    /* Línea divisoria entre imagen y texto */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#locations .equipment-item p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Estilos para la sección de contacto */
+/* Estilos para la sección de contacto */
+history {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #ffffff;
+    /* Asegura que el texto sea legible */
+}
+
+/* Contenedor de contacto */
+history .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* Información de contacto */
+history .contact-info {
+    text-align: left;
+    max-width: 350px;
+    background: rgba(0, 0, 0, 0.6);
+    /* Fondo semitransparente para mejor lectura */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+history .contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+    /* Blanco para mayor contraste */
+}
+
+history .contact-info a {
+    color: #ffcc00;
+    /* Amarillo para destacar */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+history .contact-info a:hover {
+    text-decoration: underline;
+    color: #ff9900;
+}
+
+/* Formulario de contacto */
+history .contact-form {
+    max-width: 500px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.9);
+    /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+history .contact-form h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+history .contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #222;
+}
+
+history .contact-form input,
+history .contact-form textarea {
+    width: 380px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+history .contact-form button {
+    display: block;
+    width: 400px;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+history .contact-form button:hover {
+    background-color: #0056b3;
+}
+
+#services-table,
+#users-table,
+#equipment-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    /* Fondo blanco para mejor contraste */
+    color: #000000;
+    /* Texto negro para visibilidad */
+}
+
+
+history .contact-form textarea {
+    height: 120px;
+    /* Ajusta la altura del cuadro de texto */
+    resize: none;
+    /* Evita que el usuario cambie el tamaño manualmente */
+}
+
+
+.user-info {
+    width: 100%;
+    /* Ocupa todo el ancho */
+    padding: 1px 10px;
+    /* Reduce aún más la altura */
+    background-color: #f4f4f4;
+    /* Color de fondo */
+    text-align: right;
+    /* Alinea el texto a la derecha */
+    font-weight: bold;
+    font-size: 14px;
+    /* Ajusta el tamaño del texto si es necesario */
+    line-height: 1;
+    /* Reduce el espacio vertical del texto */
+}
+
+
+/* Estilos para mejorar la visibilidad de las tablas */
+#services-table,
+#users-table,
+#equipment-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    /* Fondo blanco para mejor contraste */
+    color: #000000;
+    /* Texto negro para visibilidad */
+}
+
+#services-table th,
+#services-table td,
+#users-table th,
+#users-table td,
+#equipment-table th,
+#equipment-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#services-table th,
+#users-table th,
+#equipment-table th {
+    background-color: #004080;
+    /* Manteniendo el azul del diseño original */
+    color: white;
+    font-weight: bold;
+}
+
+#services-table tr:nth-child(even),
+#users-table tr:nth-child(even),
+#equipment-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Alternando filas para mejorar la lectura */
+}
+
+#services-table tr:hover,
+#users-table tr:hover,
+#equipment-table tr:hover {
+    background-color: #ddd;
+    /* Efecto hover para mejor experiencia */
+}
