@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>administrador.html</title>
+    <link rel="stylesheet" href="../css/administrador.css">
+</head>
+
+<body>
+    <header>
+        <a style="text-decoration:none" href="../index.html">
+            <h1><img src="../img/logo.jpg" width="30"> Technical Visit Manager
+            </h1>
+            <br>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#Tecnicos" class="menu-link" data-section="Tecnicos">Técnicos</a></li>
+                    <li><a href="#users" class="menu-link" data-section="users">Gestión de Usuarios</a></li>
+                    <li><a href="#equipment" class="menu-link" data-section="equipment">Registro de Equipos</a></li>
+                    <li><a href="#locations" class="menu-link" data-section="locations">Administración de Sedes</a></li>
+                    <li><a href="#clients" class="menu-link" data-section="clients">Listado de Clientes</a></li>
+                    <li><a href="#history" class="menu-link" data-section="history">Historial de Visitas</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <div class="user-info">
+            <h2>Administrador presione el logo para volver</h2>
+        </div>
+
+
+        <!-- Servicios Técnicos -->
+        <section id="Tecnicos" class="content-section active">
+            <h2>Técnicos</h2>
+            <form id="services-form" class="form-container">
+                <div class="form-group">
+                    <label for="service-user">Nombre del técnico:</label>
+                    <input type="text" id="service-user" placeholder="Ingrese el nombre " required>
+                </div>
+                <div class="form-group">
+                    <label for="service-availability">Disponibilidad:</label>
+                    <input type="text" id="service-availability" placeholder="Ingrese disponibilidad" required>
+                </div>
+                <button type="button" class="btn">Buscar</button>
+            </form>
+
+            <table id="services-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Nombre del Técnico</th>
+                        <th>Lugar de Visita</th>
+                        <th>Equipo</th>
+                        <th>Falla</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-03-20</td>
+                        <td>Juan Pérez</td>
+                        <td>Hospital Central</td>
+                        <td>Analizador automático para hematología BC-5150</td>
+                        <td>Error en el conteo de glóbulos blancos</td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-21</td>
+                        <td>María Gómez</td>
+                        <td>Clínica San José</td>
+                        <td>CL-900i, analizador CLIA</td>
+                        <td>Fallo en el sistema de calibración</td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-22</td>
+                        <td>Carlos Rodríguez</td>
+                        <td>Laboratorio BioMed</td>
+                        <td>EH-2030, sistema de análisis de sedimentos de orina</td>
+                        <td>Lectura incorrecta de muestras</td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-23</td>
+                        <td>Lucía Fernández</td>
+                        <td>Centro de Diagnóstico Rápido</td>
+                        <td>MR-96A, lector de micro placas</td>
+                        <td>Problema en la emisión de luz</td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-24</td>
+                        <td>Fernando López</td>
+                        <td>Hospital Universitario</td>
+                        <td>EH-2030, sistema de análisis de sedimentos de orina</td>
+                        <td>Atasco en el sistema de muestras</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- Gestión de Usuarios -->
+        <section id="users" class="content-section">
+            <h2>Gestión de Usuarios</h2>
+            <form id="users-form" class="form-container">
+                <div class="form-group">
+                    <label for="user-name">Nombre del Usuario:</label>
+                    <input type="text" id="user-name" placeholder="Ingrese el nombre del usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-role">Rol:</label>
+                    <select id="user-role" required>
+                        <option value="technician">Técnico</option>
+                        <option value="client">Cliente</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Registrar Usuario</button>
+            </form>
+            <table id="users-table" class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>Administrador</td>
+                        <td>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>María Gómez</td>
+                        <td>Técnico</td>
+                        <td>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Registro de Equipos Biomédicos -->
+        <section id="equipment" class="content-section">
+            <h2>Registro de Equipos Biomédicos</h2>
+            <form id="equipment-form" class="form-container">
+                <div class="form-group">
+                    <label for="equipment-name">Nombre del Equipo:</label>
+                    <input type="text" id="equipment-name" placeholder="Ingrese el nombre del equipo" required>
+                </div>
+                <div class="form-group">
+                    <label for="equipment-serial">Serial del Equipo:</label>
+                    <input type="text" id="equipment-serial" placeholder="Ingrese el serial del equipo" required>
+                </div>
+                <div class="form-group">
+                    <label for="equipment-model">Modelo:</label>
+                    <input type="text" id="equipment-model" placeholder="Ingrese el modelo del equipo" required>
+                </div>
+                <div class="form-group">
+                    <label for="equipment-date">Fecha de Adquisición:</label>
+                    <input type="date" id="equipment-date" required>
+                </div>
+                <button type="submit" class="btn">Registrar Equipo</button>
+            </form>
+            <table id="equipment-table" class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Nombre del Equipo</th>
+                        <th>Serial</th>
+                        <th>Modelo</th>
+                        <th>Fecha de Adquisición</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Analizador CLIA</td>
+                        <td>CL-900i-789654</td>
+                        <td>CL-900i</td>
+                        <td>2023-04-15</td>
+                        <td><button class="delete-btn">Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sistema de Análisis de Sedimentos de Orina</td>
+                        <td>EH-2030-456123</td>
+                        <td>EH-2030</td>
+                        <td>2022-08-10</td>
+                        <td><button class="delete-btn">Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Lector de Microplacas</td>
+                        <td>MR-96A-321789</td>
+                        <td>MR-96A</td>
+                        <td>2021-12-05</td>
+                        <td><button class="delete-btn">Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Administración de Sedes -->
+        <section id="locations" class="content-section">
+            <h2>Administración de Sedes</h2>
+            <form id="locations-form" class="form-container">
+                <div class="form-group">
+                    <label for="location-name">Nombre de la Sede:</label>
+                    <input type="text" id="location-name" placeholder="Ingrese el nombre de la sede" required>
+                </div>
+                <button type="submit" class="btn">Registrar Sede</button>
+            </form>
+            <table id="locations-table" class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Sede</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se agregarán dinámicamente las filas -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Listado de Clientes -->
+        <section id="clients" class="content-section">
+            <h2>Listado de Clientes</h2>
+            <form id="clients-form" class="form-container">
+                <div class="form-group">
+                    <label for="client-name">Nombre del Cliente:</label>
+                    <input type="text" id="client-name" placeholder="Ingrese el nombre del cliente" required>
+                </div>
+                <button type="submit" class="btn">Registrar Cliente</button>
+            </form>
+            <table id="clients-table" class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se agregarán dinámicamente las filas -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Historial de Visitas -->
+        <section id="history" class="content-section">
+            <h2>Historial de Visitas</h2>
+            <table id="history-table" class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Servicio</th>
+                        <th>Cliente</th>
+                        <th>Técnico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se agregarán dinámicamente las filas -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Technical Visit Manager. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
